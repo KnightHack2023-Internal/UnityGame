@@ -23,17 +23,18 @@ public class PlayerControl : MonoBehaviour
     {
         //YPos++;
         //transform.position = new Vector2(transform.position.x, (float)Math.Tanh((YPos)%100/15)*4);
-        transform.position = new Vector2(transform.position.x, YPos);
+        //transform.position = new Vector2(transform.position.x, YPos);
+        transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x, YPos), Time.deltaTime*15);
     }
 
     void PlayerPosition(int SensorDistance)
     {
-        // SensorDistance 10 or lower = Y=-4
-        // SensorDistance 20 = Y=0
-        // SensorDistance 30 or higher = Y=4
-        if (SensorDistance <= 10) YPos = -4;
-        else if (SensorDistance > 30) YPos = 4;
-        else YPos = (float)(SensorDistance*0.4 - 8);
+        // SensorDistance 5 or lower = Y=-4
+        // SensorDistance 15 = Y=0
+        // SensorDistance 25 or higher = Y=4
+        if (SensorDistance <= 5) YPos = -4;
+        else if (SensorDistance > 25) YPos = 4;
+        else YPos = (float)(SensorDistance*0.4 - 6);
 
     }
 }
