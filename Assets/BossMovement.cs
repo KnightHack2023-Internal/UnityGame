@@ -14,6 +14,6 @@ public class BossMovement : MonoBehaviour
     void Update()
     {
         // Change position one to the left
-        transform.position = transform.position + new Vector3((float)-0.0001, 0, 0);
+        transform.position = transform.position + new Vector3((float)-0.005, 0, 0);
     }
 }
