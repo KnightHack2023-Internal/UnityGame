@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowSpawn : MonoBehaviour
 {
-
+    public AudioSource audioSource;
     public GameObject Projectile;
 
     // Update is called once per frame
@@ -12,6 +12,7 @@ public class ArrowSpawn : MonoBehaviour
     {
         if (Time.frameCount % 60 == 0)
         {
+            audioSource.Play();
             int amount = 3;
             for (int i = 0; i < amount; i++)
             {
