@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 14999206}
   - component: {fileID: 14999207}
   m_Layer: 5
-  m_Name: Heart_1 (5)
+  m_Name: Heart_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 79885636}
   - component: {fileID: 79885637}
   m_Layer: 5
-  m_Name: Heart_1 (3)
+  m_Name: Heart_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1055,7 +1055,7 @@ GameObject:
   - component: {fileID: 1319805198}
   - component: {fileID: 1319805199}
   m_Layer: 5
-  m_Name: Heart_1 (2)
+  m_Name: Heart_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1139,7 +1139,7 @@ GameObject:
   - component: {fileID: 1427371554}
   - component: {fileID: 1427371553}
   m_Layer: 5
-  m_Name: UI board Small Set
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1206,7 +1206,7 @@ Transform:
   m_GameObject: {fileID: 1427371552}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.34, y: 3.92, z: 0}
+  m_LocalPosition: {x: -9.52, y: 4.45, z: 0}
   m_LocalScale: {x: 0.25268, y: 0.17696999, z: 0.69264996}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1445,6 +1445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1315cd1c4028e44813845c192c24f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealthBar: {fileID: 1427371552}
 --- !u!1 &1746755467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,7 +1457,7 @@ GameObject:
   - component: {fileID: 1746755468}
   - component: {fileID: 1746755469}
   m_Layer: 5
-  m_Name: Heart_1 (1)
+  m_Name: Heart_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1540,7 +1541,7 @@ GameObject:
   - component: {fileID: 1936136444}
   - component: {fileID: 1936136445}
   m_Layer: 5
-  m_Name: Heart_1 (4)
+  m_Name: Heart_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,10 +7,12 @@ public class PlayerControl : MonoBehaviour
 {
     NetworkHandler net;
     float YPos = 0;
+    public GameObject HealthBar;
     private void Awake()
     {
-        net = new(null);
-        net.setCallback(PlayerPosition);
+        
+        //net = new(null);
+        //net.setCallback(PlayerPosition);
     }
     // Start is called before the first frame update
     void Start()
@@ -21,9 +23,6 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //YPos++;
-        //transform.position = new Vector2(transform.position.x, (float)Math.Tanh((YPos)%100/15)*4);
-        //transform.position = new Vector2(transform.position.x, YPos);
         transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x, YPos), Time.deltaTime*15);
     }
 
