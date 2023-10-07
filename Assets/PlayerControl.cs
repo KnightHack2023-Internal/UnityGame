@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    NetworkHandler net;
-    float YPos = 0;
+    private NetworkHandler net;
+    private float YPos = 0;
+    private bool gameoverCalled = false;
     public GameObject HealthBar;
     private void Awake()
     {
@@ -24,6 +25,10 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x, YPos), Time.deltaTime*15);
+        // Out of bound check lmao
+        if (Math.Abs(transform.position.x) > 12 ||
+            MathF.Abs(transform.position.y) > 8)
+            gameOverHandler();
     }
 
     void PlayerPosition(int SensorDistance)
@@ -34,6 +39,20 @@ public class PlayerControl : MonoBehaviour
         if (SensorDistance <= 5) YPos = -4;
         else if (SensorDistance > 25) YPos = 4;
         else YPos = (float)(SensorDistance*0.4 - 6);
-
+    }
+    void gameOverHandler()
+    {
+        if (gameoverCalled) return;
+        gameoverCalled = true;
+        Debug.Log("GAME OVER HANDLER CALLED");
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name == "Arrow(Clone)")
+        {
+            int ind = HealthBar.transform.hierarchyCount - 2;
+            Destroy(HealthBar.transform.GetChild(ind).gameObject);
+            if (ind == 0) gameOverHandler();
+        }
     }
 }
