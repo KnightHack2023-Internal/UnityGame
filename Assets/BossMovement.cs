@@ -6,13 +6,15 @@ using UnityEngine;
 public class BossMovement : MonoBehaviour
 {
     public GameObject player;
-    int x_place = 3;
+    public AudioSource audioclip;
+    bool loc = false;
     // Start is called before the first frame update
 
     private IEnumerator FightDelay()
     {
         yield return new WaitForSeconds(3);
     }
+
     void Start()
     {
 
@@ -25,9 +27,14 @@ public class BossMovement : MonoBehaviour
         if (transform.position.x > 3) transform.position = transform.position + new Vector3((float)-0.005, 0, 0);
         else
         {
+            if(!loc)
+            {
+                audioclip.Play();
+                loc = true;
+            }
             Debug.Log("Fight start!");
             StartCoroutine(FightDelay());
-            transform.position = new Vector3(x_place, player.transform.position.y, 0);
+            transform.position = new Vector3(3, player.transform.position.y, 0);
         }
 
     }

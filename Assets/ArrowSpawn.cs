@@ -10,7 +10,7 @@ public class ArrowSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.frameCount % 60 == 0)
+        if (Time.frameCount % 120 == 0)
         {
             audioSource.Play();
             int amount = 3;
