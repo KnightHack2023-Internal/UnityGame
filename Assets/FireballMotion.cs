@@ -20,7 +20,7 @@ public class FireballMotion : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Boss")
+        if (collision.gameObject.tag == "Boss" || collision.gameObject.tag == "Fireball")
         {
             Debug.Log("Collision Detected!");
             Destroy(this.gameObject);

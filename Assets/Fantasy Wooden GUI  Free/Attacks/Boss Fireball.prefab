@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1250332419061188138}
   - component: {fileID: 3934434329474602487}
   - component: {fileID: -5873966702437930379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss Fireball
-  m_TagString: Untagged
+  m_TagString: Fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +148,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 65
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 62

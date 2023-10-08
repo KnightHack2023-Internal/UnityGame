@@ -9,7 +9,7 @@ using UnityEngine;
 
 public static class NetworkHandler
 {
-    public static int distance = 0;
+    public static int distance = 15;
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void LoadNetwork()
     {
