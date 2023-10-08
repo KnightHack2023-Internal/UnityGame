@@ -7,6 +7,7 @@ public class BossMovement : MonoBehaviour
 {
     public GameObject player;
     public AudioSource audioclip;
+    public GameObject health;
     bool loc = false;
     // Start is called before the first frame update
 
@@ -32,6 +33,7 @@ public class BossMovement : MonoBehaviour
             if(!loc)
             {
                 audioclip.Play();
+                health.SetActive(true);
                 loc = true;
             }
             Debug.Log("Fight start!");
@@ -46,16 +48,6 @@ public class BossMovement : MonoBehaviour
                     framePass = 0;
                 }
             if (Time.frameCount % 600 == 0) freeze = true;
-            /*
-            if (Time.frameCount % 600 == 0 || (Time.frameCount < frames + 180 && Time.frameCount >= frames))
-            {
-                frames = Time.frameCount;
-                if (Time.frameCount > frames + 180)
-                    {
-                        Debug.Log("Fire!");
-                        frames = 0;
-                    }
-            }*/
         }
 
     }
