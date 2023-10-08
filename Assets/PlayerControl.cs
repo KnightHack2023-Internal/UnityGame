@@ -46,7 +46,8 @@ public class PlayerControl : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "Arrow(Clone)")
+        if(collision.gameObject.name == "Arrow(Clone)" ||
+            collision.gameObject.name == "Boss Fireball(Clone)")
         {
             int ind = HealthBar.transform.hierarchyCount - 2;
             Destroy(HealthBar.transform.GetChild(ind).gameObject);

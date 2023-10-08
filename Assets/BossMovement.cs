@@ -7,7 +7,6 @@ public class BossMovement : MonoBehaviour
 {
     public GameObject player;
     public AudioSource audioclip;
-    int frames = 0;
     bool loc = false;
     // Start is called before the first frame update
 

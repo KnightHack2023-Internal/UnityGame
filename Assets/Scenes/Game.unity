@@ -1032,7 +1032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1074232563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1460,6 +1460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1685092272}
   attack: {fileID: 2820844827439194625, guid: 518a1f635644b8b4faa322874780e825, type: 3}
+  healthBoss: {fileID: 1049874435}
 --- !u!1 &1253878564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,7 +1718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1472616029
 Transform:
   m_ObjectHideFlags: 0
